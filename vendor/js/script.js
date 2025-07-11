@@ -562,16 +562,14 @@ class Needle {
 		var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 		const video = this.browserPlayer;
-		
-		setTimeout(() => {
-			video.muted = false;
-		}, 0);
 
 		if (!isSafari) {
-			console.log("NO SAFARI");
+			video.muted = false;
+			console.log('NO SAFARI');			
 		}
-		if (isSafari) {
-			console.log("IS SAFARI");
+		
+		if(isSafari){
+			console.log('IS SAFARI');
 		}
 
 		// Событие окончания воспроизведения
